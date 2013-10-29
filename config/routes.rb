@@ -1,6 +1,6 @@
 SampleApp::Application.routes.draw do
-  get "users/new"
-  # get "static_pages/home"
+  resources :users
+  # get "users/new" # should be removed
   root 'static_pages#home', via: 'get'
   match '/signup', to: 'users#new', via:'get'
   match '/help', to: 'static_pages#help', via: 'get'
